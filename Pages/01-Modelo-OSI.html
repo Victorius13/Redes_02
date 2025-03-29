@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modelo OSI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-owesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../Styles/Navbar_Float.css">
+</head>
+
+<body>
+    <nav class="navbar is-info">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong>Modelo OSI (Open Systems Interconnection) y Capa Fisica</strong>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <section class="section">
+        <div class="container">
+            <!-- Modelo OSI -->
+            <div class="box">
+                <h2 class="title is-4 has-text-info">Modelo OSI</h2>
+                <div class="content">
+                    <p class="subtitle is-6">El modelo OSI es un modelo conceptual que no define ni especifica interfaces y protocolos, únicamente establece criterios generales sobre cómo concebir las redes de comunicaciones de datos.
+                        <br> El proceso de transmisión de datos, intervienen componentes software y hardware. Debido a ello, los procedimientos se dividen en capas o niveles.
+                        <br> En el modelo OSI se consideran siete niveles, en cada uno de ellos se procesan unidades de información denominadas PDU (Unidad de datos de protocolo).
+                        <br> En los ordenadores emisores las PDU se transmiten del nivel superior al inferior, y en cada uno de ellos se añade información de control:
+                        <br>
+                        <strong>cabeceras, AH, PH, SH, TH, NH, DH, o terminales DT.</strong> <br> En los Ordenadores receptores la información se procesa desde el nivel inferior, comprobando y eliminando en cada nivel las cabeceras o terminales de cada
+                        PDU correspondiente a dicho nivel.
+                    </p>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="title is-5">Las Funciones Principales de la Capa Fisica son:</h3>
+                            <ul>
+                                <li>Transmisión de bits mediante señales eléctricas/ópticas</li>
+                                <li>Definición de medios físicos y conectores</li>
+                                <li>Codificación y sincronización de datos</li>
+                                <li>Control de conexión física</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipos de Redes -->
+            <div class="box">
+                <h2 class="title is-4 has-text-success">Tipos de Redes</h2>
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        <div class="card">
+                            <!--Red LAN-->
+                            <div class="card-header has-background-success-light">
+                                <p class="card-header-title">LAN (Local Area Network)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>=> Conectan dispositivos en un área geográfica limitada, como un edificio o campus
+                                    </li>
+                                    <li>=> Utilizan cables Ethernet o conexiones inalámbricas (Wi-Fi) para la transmisión de datos.</li>
+                                    <li>=> Ofrecen alta velocidad y baja latencia debido a la proximidad de los dispositivos.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <!--Red WLAN-->
+                            <div class="card-header has-background-success-light">
+                                <p class="card-header-title">WLAN (Wireless Local Area Network)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>=> Versiones inalámbricas de las LAN, utilizando Wi-Fi para conectar dispositivos.
+                                    </li>
+                                    <li>=> Ideales para entornos donde el cableado es impráctico, como hogares o espacios públicos.</li>
+                                    <li>=> Latencia variable debido a posibles interferencias del entorno.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <!--Red WAN-->
+                            <div class="card-header has-background-success-light">
+                                <p class="card-header-title">WAN (Wide Area Network)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>=> Conectan dispositivos en áreas geográficas extensas, como ciudades o países.
+                                    </li>
+                                    <li>=> Utilizan tecnologías como MPLS, VPN y líneas arrendadas para la transmisión de datos.</li>
+                                    <li>=> Son más lentas que las LAN debido a las distancias mayores y la congestión de la red.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <!--Red VPN-->
+                            <div class="card-header has-background-success-light">
+                                <p class="card-header-title">VPN (Virtual Private Network)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>=> Conexiones seguras y cifradas a través de redes públicas, como Internet.</li>
+                                    <li>=> Útiles para acceder a redes privadas de forma remota o garantizar la privacidad en línea</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topologías -->
+            <div class="box">
+                <h2 class="title is-4 has-text-info">Topologías de Red</h2>
+                <div class="columns is-multiline">
+                    <!--Bus-->
+                    <div class="column is-12">
+                        <div class="card">
+                            <div class="card-header has-background-primary-light">
+                                <p class="card-header-title">Conexión en Bus</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Todos los dispositivos están conectados a un único cable central (bus).</li>
+                                    <li>Fácil de configurar, pero un fallo en el cable principal puede interrumpir toda la red.</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anillo-->
+                    <div class="column is-12">
+                        <div class="card">
+                            <div class="card-header has-background-primary-light">
+                                <p class="card-header-title">Conexión en Anillo</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Los dispositivos están conectados en un círculo, donde cada nodo se comunica con sus vecinos.</li>
+                                    <li>No requiere terminación, pero un fallo en un nodo puede afectar toda la red.
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Malla-->
+                    <div class="column is-12">
+                        <div class="card">
+                            <div class="card-header has-background-primary-light">
+                                <p class="card-header-title">Conexión en Malla</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Cada dispositivo tiene conexiones directas con otros dispositivos.</li>
+                                    <li>- Proporciona alta disponibilidad, pero es costosa y compleja de implementar
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Estrella-->
+                    <div class="column is-12">
+                        <div class="card">
+                            <div class="card-header has-background-primary-light">
+                                <p class="card-header-title">Red en Estrella</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Todos los dispositivos están conectados a un nodo central (hub o switch).</li>
+                                    <li>Fácil de solucionar problemas, pero un fallo en el nodo central afecta toda la red
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Arbol-->
+                    <div class="column is-12">
+                        <div class="card">
+                            <div class="card-header has-background-primary-light">
+                                <p class="card-header-title">Red en Árbol</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Combina características de las topologías en estrella y bus, con dispositivos conectados en ramificaciones.</li>
+                                    <li>Escalable, pero un fallo en el cable principal puede interrumpir múltiples ramas.
+                                    </li>
+                                    <li>Vulnerable a fallos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dispositivos -->
+            <div class="box">
+                <h2 class="title is-4 has-text-warning">Dispositivos de Red</h2>
+                <div class="columns">
+                    <!--Hub-->
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header has-background-warning-light">
+                                <p class="card-header-title">Hub (Concentrador)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Conecta múltiples dispositivos en una red LAN, enviando datos a todos los puertos.
+                                    </li>
+                                    <li>Simple pero ineficiente, ya que no filtra el tráfico.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--swith-->
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header has-background-warning-light">
+                                <p class="card-header-title">Switch (Interruptur)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Similar a un hub, pero dirige el tráfico solo al dispositivo de destino, mejorando la eficiencia.</li>
+                                    <li>Ideal para redes LAN con múltiples dispositivos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Router-->
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header has-background-warning-light">
+                                <p class="card-header-title">Router (Enrutador)</p>
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li>Conecta diferentes redes (LAN, WAN) y dirige el tráfico entre ellas.</li>
+                                    <li>Esencial para la comunicación entre redes y el acceso a Internet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pl-6">
+        <div class="box">
+            <img src="./../Img/01-Sennales.png" alt="Espectro de Señales de Red">
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="box">
+                <h2 class="title is-4 has-text-info">Conexión Punto a Punto</h2>
+                <div class="columns is-multiline">
+                    <!-- Descripción -->
+                    <div class="column is-6-mobile is-8-tablet">
+                        <div class="content">
+                            <p class="subtitle is-6">
+                                <span class="icon has-text-info">
+                                    <i class="fas fa-link"></i>
+                                </span> Conexión directa entre dos dispositivos sin intermediarios
+                            </p>
+
+                            <div class="notification is-info is-light">
+                                <strong>Características principales:</strong>
+                                <ul>
+                                    <li>Comunicación exclusiva entre dos nodos</li>
+                                    <li>Máxima privacidad en la transmisión</li>
+                                    <li>Control total del ancho de banda</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detalles técnicos -->
+                    <div class="column is-6-mobile is-4-tablet">
+                        <article class="message is-link">
+                            <div class="message-header">
+                                <p>Ventajas/Desventajas</p>
+                            </div>
+                            <div class="message-body">
+                                <div class="menu">
+                                    <ul class="menu-list">
+                                        <li class="has-text-success">
+                                            <span class="icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </span> Baja latencia
+                                        </li>
+                                        <li class="has-text-success">
+                                            <span class="icon">
+                                                <i class="fas fa-check-circle"></i>
+                                            </span> Mayor seguridad
+                                        </li>
+                                        <li class="has-text-danger">
+                                            <span class="icon">
+                                                <i class="fas fa-times-circle"></i>
+                                            </span> Escala limitada
+                                        </li>
+                                        <li class="has-text-danger">
+                                            <span class="icon">
+                                                <i class="fas fa-times-circle"></i>
+                                            </span> Costo por conexión
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Ejemplos -->
+                <div class="content mt-4">
+                    <h3 class="title is-5">Ejemplos comunes:</h3>
+                    <div class="tags are-medium">
+                        <span class="tag is-info">Conexiones WAN dedicadas</span>
+                        <span class="tag is-info">Enlaces microondas</span>
+                        <span class="tag is-info">Conexiones VPN directas</span>
+                        <span class="tag is-info">Enlaces satelitales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar-floating">
+        <div class="buttons are-small is-flex is-flex-direction-column">
+            <a href="./../index.html" class="button is-rounded is-info is-outlined" aria-label="Inicio" style="margin-bottom: 0.5rem;">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" style="width: 1rem; height: 1rem;">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="#top" class="button is-rounded is-info is-outlined" aria-label="Volver arriba" style="margin-bottom: 0.5rem;">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" style="width: 1rem; height: 1rem;">
+                        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                    </svg>
+                </span>
+            </a>
+
+            <a href="./02-Capas-2-7.html" class="button is-rounded is-info is-outlined" aria-label="Siguiente">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" style="width: 1rem; height: 1rem;">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Desarrollado Por: Victor Jerez victorjerezlara@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
